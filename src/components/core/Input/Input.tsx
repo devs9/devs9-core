@@ -5,7 +5,7 @@ import FormControl from '@material-ui/core/FormControl'
 import {InputMask} from './elements'
 import {IInput} from './ts'
 
-// export {IInput}
+export {IInput}
 export const Input: FC<IInput> = memo(({mask, inputProps}) => (
   <FormControl>{!mask ? <InputMui inputProps={inputProps} /> : <InputMask />}</FormControl>
 ))
