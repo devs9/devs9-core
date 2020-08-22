@@ -7,10 +7,9 @@ import {IInput} from './ts'
 
 export {IInput}
 export const Input: FC<IInput & InputProps> = memo(({mask, formProps, ...restProps}) => {
-  console.log(formProps)
   /** constants */
   const InputComponent = mask ? <InputMask {...restProps} /> : <InputMui {...restProps} />
 
   /** return */
-  return <FormControl>{InputComponent}</FormControl>
+  return <FormControl {...formProps}>{InputComponent}</FormControl>
 })
