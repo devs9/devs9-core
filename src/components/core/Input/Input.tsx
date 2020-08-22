@@ -6,14 +6,10 @@ import {InputMask} from './elements'
 import {IInput} from './ts'
 
 export {IInput}
-export const Input: FC<IInput & InputProps> = memo(({mask, ...restInputProps}) => {
+export const Input: FC<IInput & InputProps> = memo(({mask, ...restProps}) => {
   /** constants */
-  const InputField = mask ? (
-    <InputMask {...restInputProps} inputProps={restInputProps.inputProps} />
-  ) : (
-    <InputMui {...restInputProps} />
-  )
+  const InputComponent = mask ? <InputMask {...restProps} /> : <InputMui {...restProps} />
 
   /** return */
-  return <FormControl>{InputField}</FormControl>
+  return <FormControl>{InputComponent}</FormControl>
 })

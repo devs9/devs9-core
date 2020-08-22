@@ -7,6 +7,6 @@ export interface IInputCustomMask extends MaskedInputProps {
   inputRef: (ref: HTMLElement | null) => void
 }
 
-export interface IInput extends InputProps {
+export interface IInput {
   mask?: boolean
 }
