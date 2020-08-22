@@ -21,7 +21,7 @@ export default [
       },
       {
         file: pkg.module,
-        format: 'es2017',
+        format: 'es6',
         exports: 'named',
         sourcemap: true
       }
