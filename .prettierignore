@@ -1,15 +1,8 @@
 # Build artefacts
-/build/*
-/core/*
-/coverage/*
+/core
 /package.json
 /package-lock.json
 /.lintstagedrc.json
-/jest.config.js
 
 # Custom Files
 /rollup.config.js
-/src/services/serviceWorker.ts
-
-# Styles
-src/styles/scss/*
