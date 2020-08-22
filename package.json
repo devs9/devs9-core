@@ -6,7 +6,7 @@
   "types": "core/index.d.ts",
   "typings": "core/typings",
   "main": "core/index.js",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "private": false,
   "eslintConfig": {
     "extends": "react-app"
