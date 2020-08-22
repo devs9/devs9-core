@@ -10,7 +10,7 @@ import type {IInput} from './ts'
 export type {IInput}
 export const Input: FC<IInput & InputProps> = memo(({mask, label, labelProps, formProps, ...restProps}) => {
   /** constants */
-  const inputMaskProps = {...restProps, formProps}
+  const inputMaskProps = {...restProps, formProps, labelProps, label}
 
   /** components */
   const Field = formProps?.variant === "outlined" ? <OutlinedInput {...restProps} /> : <InputMui {...restProps} />
