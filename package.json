@@ -10,9 +10,6 @@
     "node": ">=8",
     "npm": ">=5"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
