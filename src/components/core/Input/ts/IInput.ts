@@ -4,6 +4,10 @@ import {FormControlProps} from '@material-ui/core/FormControl'
 
 export type InputMaskComponent = InputProps['inputComponent']
 
+export interface IInputMask {
+  formProps?: FormControlProps
+}
+
 export interface IInputCustomMask extends MaskedInputProps {
   inputRef: (ref: HTMLElement | null) => void
 }
