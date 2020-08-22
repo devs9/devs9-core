@@ -6,7 +6,7 @@
   "types": "core/index.d.ts",
   "typings": "core/index",
   "main": "core/index.js",
-  "version": "1.2.6",
+  "version": "1.2.8",
   "private": false,
   "eslintConfig": {
     "extends": "react-app"
@@ -19,7 +19,9 @@
     "core"
   ],
   "dependencies": {
-    "react-text-mask": "^5.4.3"
+    "react-text-mask": "^5.4.3",
+    "lodash": "^4.17.19",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -34,12 +36,10 @@
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "lodash": "^4.17.19",
     "prettier": "^1.18.2",
     "react": "^16.13.1",
     "react-docgen-typescript": "^1.12.5",
     "react-docgen-typescript-loader": "3.1.0",
-    "react-text-mask": "^5.4.3",
     "rollup": "^1.16.6",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
@@ -48,7 +48,6 @@
     "rollup-plugin-postcss": "^2.9.0",
     "rollup-plugin-typescript2": "^0.22.0",
     "rollup-plugin-url": "^2.2.2",
-    "ts-loader": "^6.2.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-typescript": "^9.0.0",
@@ -57,17 +56,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "tslib": "^1.10.0",
-    "tslint": "^5.20.0",
-    "tslint-clean-code": "^0.2.10",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "tslint-react": "^4.1.0",
-    "tslint-react-hooks": "^2.2.1",
-    "tslint-sonarts": "^1.9.0",
-    "typescript": "^4.0.2",
-    "yup": "^0.29.3"
+    "typescript": "^4.0.2"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.0",
