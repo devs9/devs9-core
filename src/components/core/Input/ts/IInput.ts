@@ -1,5 +1,6 @@
 import {MaskedInputProps} from 'react-text-mask'
 import {InputProps} from '@material-ui/core/Input'
+import {FormControlProps} from '@material-ui/core/FormControl'
 
 export type InputMaskComponent = InputProps['inputComponent']
 
@@ -9,4 +10,5 @@ export interface IInputCustomMask extends MaskedInputProps {
 
 export interface IInput {
   mask?: boolean
+  formProps: FormControlProps
 }
