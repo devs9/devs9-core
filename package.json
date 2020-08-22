@@ -6,6 +6,7 @@
   "typings": "core/index",
   "main": "core/index.js",
   "version": "1.1.0",
+  "private": false,
   "engines": {
     "node": ">=8",
     "npm": ">=5"
