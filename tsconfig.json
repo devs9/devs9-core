@@ -17,16 +17,18 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "module": "ESNext",
-    "rootDir": "./src/",
+    "outDir": "build",
+    "rootDir": "./src",
     "jsx": "react"
   },
   "include": [
     "src"
   ],
   "exclude": [
+    "**/dist/**",
     "**/build/**",
     "**/coverage/**",
-    "**/dist/**",
-    "**/node_modules/**"
+    "**/node_modules/**",
+    "rollup.config.js"
   ]
 }
