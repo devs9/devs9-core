@@ -4,9 +4,8 @@
   "jsnext:main": "core/index.es.js",
   "module": "core/index.es.js",
   "types": "core/index.d.ts",
-  "typings": "core/index",
   "main": "core/index.js",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "private": false,
   "eslintConfig": {
     "extends": "react-app"

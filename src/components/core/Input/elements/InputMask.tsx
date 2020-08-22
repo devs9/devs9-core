@@ -26,8 +26,15 @@ const InputPhoneMask: FC<IInputCustomMask> = ({inputRef, mask, ...other}) =>
   )
 
 export {IInputCustomMask}
-export const InputMask: FC<InputProps> = memo(props => (
-  <FormControl>
-    <InputMui inputProps={props.inputProps} inputComponent={InputPhoneMask as InputMaskComponent} />
-  </FormControl>
-))
+export const InputMask: FC<InputProps> = memo(props => {
+  const inputMaskProps = {
+    ...props,
+    inputComponent: InputPhoneMask as InputMaskComponent
+  }
+
+  return (
+    <FormControl>
+      <InputMui {...inputMaskProps} />
+    </FormControl>
+  )
+})
