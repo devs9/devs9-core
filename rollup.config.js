@@ -6,15 +6,10 @@ import typescript from 'rollup-plugin-typescript2'
 import external from 'rollup-plugin-peer-deps-external'
 import pkg from './package.json'
 
-const outputComponents = 'dist/index.js'
-const inputComponents = 'src/components/core/index.ts'
-
-export default [
-  {
-    input: inputComponents,
-    output: [
-      {
-        file: outputComponents,
+export default [{
+    input: 'src/index.ts',
+    output: [{
+        file: pkg.main,
         format: 'cjs',
         exports: 'named',
         sourcemap: true
@@ -24,8 +19,7 @@ export default [
         format: 'es',
         exports: 'named',
         sourcemap: true
-      }
-    ],
+      }],
     plugins: [
       external(),
       url(),
