@@ -1,22 +1,19 @@
 {
   "name": "devs9-core",
   "author": "George PolAdaShvili",
-  "jsnext:main": "dist/index.es.js",
-  "module": "dist/index.es.js",
+  "jsnext:main": "core/index.es.js",
+  "module": "core/index.es.js",
   "typings": "core/index",
-  "main": "dist/index.js",
-  "version": "1.1.5",
+  "main": "core/index.js",
+  "version": "1.1.6",
   "private": false,
   "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "node": ">=12",
+    "npm": ">=6"
   },
   "files": [
-    "dist"
+    "core"
   ],
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.8.4",

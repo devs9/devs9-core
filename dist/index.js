@@ -9,6 +9,44 @@ var React__default = _interopDefault(React);
 var InputMui = _interopDefault(require('@material-ui/core/Input'));
 var FormControl = _interopDefault(require('@material-ui/core/FormControl'));
 
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function unwrapExports (x) {
@@ -26,7 +64,7 @@ var reactTextMask = createCommonjsModule(function (module, exports) {
 var MaskedInput = unwrapExports(reactTextMask);
 var reactTextMask_1 = reactTextMask.reactTextMask;
 
-const phone = [
+var phone = [
     '+',
     '3',
     '8',
@@ -47,20 +85,29 @@ const phone = [
     /\d/,
     /\d/
 ];
-const masks = {
-    phone
+var masks = {
+    phone: phone
 };
 
 /**
  * Phone Mask
  * */
-const InputPhoneMask = ({ inputRef, mask, ...other }) => React.useMemo(() => (React__default.createElement(MaskedInput, Object.assign({}, other, { showMask: true, type: "tel", id: "maskPhone", placeholderChar: "_", mask: masks.phone, ref: (ref) => inputRef(ref ? ref.inputElement : null) }))), // eslint-disable-next-line react-hooks/exhaustive-deps
-[inputRef]);
-const InputMask = React.memo(({ inputProps }) => (React__default.createElement(FormControl, null,
-    React__default.createElement(InputMui, { inputProps: inputProps, inputComponent: InputPhoneMask }))));
+var InputPhoneMask = function (_a) {
+    var inputRef = _a.inputRef, mask = _a.mask, other = __rest(_a, ["inputRef", "mask"]);
+    return React.useMemo(function () { return (React__default.createElement(MaskedInput, __assign({}, other, { showMask: true, type: "tel", id: "maskPhone", placeholderChar: "_", mask: masks.phone, ref: function (ref) { return inputRef(ref ? ref.inputElement : null); } }))); }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    [inputRef]);
+};
+var InputMask = React.memo(function (_a) {
+    var inputProps = _a.inputProps;
+    return (React__default.createElement(FormControl, null,
+        React__default.createElement(InputMui, { inputProps: inputProps, inputComponent: InputPhoneMask })));
+});
 
 // export {IInput}
-const Input = React.memo(({ mask, inputProps }) => (React__default.createElement(FormControl, null, !mask ? React__default.createElement(InputMui, { inputProps: inputProps }) : React__default.createElement(InputMask, null))));
+var Input = React.memo(function (_a) {
+    var mask = _a.mask, inputProps = _a.inputProps;
+    return (React__default.createElement(FormControl, null, !mask ? React__default.createElement(InputMui, { inputProps: inputProps }) : React__default.createElement(InputMask, null)));
+});
 
 exports.Input = Input;
 //# sourceMappingURL=index.js.map
