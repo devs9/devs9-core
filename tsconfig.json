@@ -3,7 +3,7 @@
     "jsx": "react",
     "outDir": "core",
     "target": "ES2015",
-    "module": "CommonJS",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
