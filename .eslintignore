@@ -1,5 +1,6 @@
 # Build artefacts
 /core
+/coverage
 /package.json
 /package-lock.json
 /.lintstagedrc.json
