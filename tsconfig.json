@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "outDir": "core",
-    "target": "ES2020",
+    "target": "ES2015",
     "module": "CommonJS",
     "moduleResolution": "node",
     "noEmit": true,
