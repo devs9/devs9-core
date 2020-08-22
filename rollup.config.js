@@ -21,7 +21,7 @@ export default [
       },
       {
         file: pkg.module,
-        format: 'es',
+        format: 'es2020',
         exports: 'named',
         sourcemap: true
       }
