@@ -5,7 +5,7 @@
   "module": "core/index.es.js",
   "types": "core/index.d.ts",
   "main": "core/index.js",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "private": false,
   "eslintConfig": {
     "extends": "react-app"
