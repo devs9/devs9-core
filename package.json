@@ -4,7 +4,6 @@
   "jsnext:main": "core/index.es.js",
   "module": "core/index.es.js",
   "types": "core/index.d.ts",
-  "typings": "core/typings",
   "main": "core/index.js",
   "version": "1.4.4",
   "private": false,
