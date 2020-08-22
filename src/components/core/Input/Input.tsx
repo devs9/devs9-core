@@ -16,9 +16,11 @@ export const Input: FC<IInput & InputProps> = memo(({mask, label, labelProps, fo
   const Field = formProps?.variant === "outlined" ? <OutlinedInput {...restProps} /> : <InputMui {...restProps} />
   const InputComponent = mask ? <InputMask {...inputMaskProps} /> : Field
 
+  console.log({label})
+
   /** return */
   return <FormControl {...formProps}>
-    {label && <InputLabel htmlFor={labelProps?.htmlFor} {...labelProps}>{label}</InputLabel>}
+    {label && <InputLabel {...labelProps}>{label}</InputLabel>}
     {InputComponent}
   </FormControl>
 })

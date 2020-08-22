@@ -6,7 +6,9 @@ import {FormControlProps} from '@material-ui/core/FormControl'
 export type InputMaskComponent = InputProps['inputComponent']
 
 export interface IInputMask {
+  label?: string
   formProps?: FormControlProps
+  labelProps?: InputLabelProps
 }
 
 export interface IInputCustomMask extends MaskedInputProps {

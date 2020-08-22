@@ -4,6 +4,7 @@ import FormControl from '@material-ui/core/FormControl'
 import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputMui from '@material-ui/core/Input'
 
+import InputLabel from '@material-ui/core/InputLabel'
 import {masks} from '../../../../constants'
 import {InputMaskComponent, IInputCustomMask, IInputMask} from '../ts'
 
@@ -26,13 +27,14 @@ const InputPhoneMask: FC<IInputCustomMask> = ({inputRef, mask, ...other}) =>
     [inputRef]
   )
 
-export const InputMask: FC<IInputMask> = memo(({formProps, ...inputProps} )=> {
+export const InputMask: FC<IInputMask> = memo(({label, labelProps, formProps, ...inputProps} )=> {
   /** constants */
   const inputMaskProps = {...inputProps, inputComponent: InputPhoneMask as InputMaskComponent}
   const Field = formProps?.variant === "outlined" ? <OutlinedInput {...inputMaskProps} /> : <InputMui {...inputMaskProps} />
 
   return (
     <FormControl {...formProps}>
+      {label && <InputLabel {...labelProps}>{label}</InputLabel>}
       {Field}
     </FormControl>
   )
