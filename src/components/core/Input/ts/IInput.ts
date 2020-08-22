@@ -10,5 +10,5 @@ export interface IInputCustomMask extends MaskedInputProps {
 
 export interface IInput {
   mask?: boolean
-  formProps: FormControlProps
+  formProps?: FormControlProps
 }
