@@ -1,4 +1,4 @@
 {
-  "*.+(js|jsx|ts|tsx)": ["yarn lint", "git add"],
-  "*.+(json|scss|md)": ["yarn prettier", "git add"]
+  "*.+(js|jsx|ts|tsx)": ["npm run eslint", "git add"],
+  "*.+(json|scss|md)": ["npm run prettier", "git add"]
 }
