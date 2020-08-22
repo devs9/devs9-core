@@ -26,21 +26,10 @@ const InputPhoneMask: FC<IInputCustomMask> = ({inputRef, mask, ...other}) =>
     [inputRef]
   )
 
-// export type {IInputMask}
 export const InputMask: FC<IInputMask> = memo(({formProps, ...inputProps} )=> {
-  let Field
-
-
-  const inputMaskProps = {
-    ...inputProps,
-    inputComponent: InputPhoneMask as InputMaskComponent
-  }
-
-  if (formProps?.variant === "outlined") {
-    Field = <OutlinedInput {...inputMaskProps} />
-  } else {
-    Field = <InputMui {...inputMaskProps} />
-  }
+  /** constants */
+  const inputMaskProps = {...inputProps, inputComponent: InputPhoneMask as InputMaskComponent}
+  const Field = formProps?.variant === "outlined" ? <OutlinedInput {...inputMaskProps} /> : <InputMui {...inputMaskProps} />
 
   return (
     <FormControl {...formProps}>
