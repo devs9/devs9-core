@@ -30,8 +30,6 @@
     "src"
   ],
   "exclude": [
-    "core",
-    "**/core/**",
     "**/build/**",
     "**/coverage/**",
     "**/node_modules/**",
