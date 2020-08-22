@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "module": "ESNext",
+    "outDir": "core",
     "target": "ES2020",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
@@ -29,6 +30,7 @@
     "src"
   ],
   "exclude": [
+    "core",
     "**/core/**",
     "**/build/**",
     "**/coverage/**",
