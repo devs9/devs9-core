@@ -1,6 +1,5 @@
 {
   "name": "devs9-core",
-  "author": "George PolAdaShvili",
   "jsnext:main": "core/index.es.js",
   "module": "core/index.es.js",
   "typings": "core/index",
